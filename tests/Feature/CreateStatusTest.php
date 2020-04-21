@@ -22,12 +22,10 @@ class CreateStatusTest extends TestCase
 
     public function an_authenticated_user_can_create_statuses()
     {
-        $this->withoutExceptionHandling();
-
         $user = factory(User::class)->create();
         $this->actingAs($user);
 
-        $response = $this->post(route('statuses.store'),['body' => 'Mi primer status']);
+        $response = $this->postJson(route('statuses.store'),['body' => 'Mi primer status']);
 
         $response->assertJson([
             'body' => 'Mi primer status'
@@ -38,5 +36,39 @@ class CreateStatusTest extends TestCase
             'body' => 'Mi primer status'
         ]);
 
+    }
+
+    /** @test */
+    function a_status_requires_a_body()
+    {
+        $user = factory(User::class)->create();
+        $this->actingAs($user);
+
+        $response = $this->postJson(route('statuses.store'),['body' => '']);
+        //dd($response->getContent());
+
+        //$response->assertSessionHasErrors('body');
+        $response->assertStatus(422);
+
+        $response->assertJsonStructure([
+           'message', 'errors' => ['body']
+        ]);
+    }
+
+    /** @test */
+    function a_status_body_requires_a_minimum_length()
+    {
+        $user = factory(User::class)->create();
+        $this->actingAs($user);
+
+        $response = $this->postJson(route('statuses.store'),['body' => 'asdf']);
+        //dd($response->getContent());
+
+        //$response->assertSessionHasErrors('body');
+        $response->assertStatus(422);
+
+        $response->assertJsonStructure([
+            'message', 'errors' => ['body']
+        ]);
     }
 }
