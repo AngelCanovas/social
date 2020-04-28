@@ -45,9 +45,7 @@ class CreateStatusTest extends TestCase
         $this->actingAs($user);
 
         $response = $this->postJson(route('statuses.store'),['body' => '']);
-        //dd($response->getContent());
 
-        //$response->assertSessionHasErrors('body');
         $response->assertStatus(422);
 
         $response->assertJsonStructure([
@@ -62,9 +60,7 @@ class CreateStatusTest extends TestCase
         $this->actingAs($user);
 
         $response = $this->postJson(route('statuses.store'),['body' => 'asdf']);
-        //dd($response->getContent());
 
-        //$response->assertSessionHasErrors('body');
         $response->assertStatus(422);
 
         $response->assertJsonStructure([
