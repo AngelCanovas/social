@@ -10,7 +10,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class CreateStatusTest extends TestCase
 {
     use RefreshDatabase;
-
     /** @test */
 
     function guests_users_can_not_create_statuses()
