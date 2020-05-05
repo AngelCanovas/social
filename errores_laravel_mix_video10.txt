@@ -1,0 +1,1463 @@
+Microsoft Windows [Versión 10.0.18363.815]
+(c) 2019 Microsoft Corporation. Todos los derechos reservados.
+
+C:\WINDOWS\system32>cd C:\Users\Trash\Desktop\Proyectosv
+
+C:\Users\Trash\Desktop\Proyectosv>cd homestead
+
+C:\Users\Trash\Desktop\Proyectosv\homestead>vagrant up
+Bringing machine 'homestead' up with 'virtualbox' provider...
+==> homestead: Checking if box 'laravel/homestead' version '9.5.0' is up to date...
+==> homestead: Clearing any previously set forwarded ports...
+==> homestead: Clearing any previously set network interfaces...
+==> homestead: Preparing network interfaces based on configuration...
+    homestead: Adapter 1: nat
+    homestead: Adapter 2: hostonly
+==> homestead: Forwarding ports...
+    homestead: 80 (guest) => 8000 (host) (adapter 1)
+    homestead: 443 (guest) => 44300 (host) (adapter 1)
+    homestead: 3306 (guest) => 33060 (host) (adapter 1)
+    homestead: 4040 (guest) => 4040 (host) (adapter 1)
+    homestead: 5432 (guest) => 54320 (host) (adapter 1)
+    homestead: 8025 (guest) => 8025 (host) (adapter 1)
+    homestead: 9600 (guest) => 9600 (host) (adapter 1)
+    homestead: 27017 (guest) => 27017 (host) (adapter 1)
+    homestead: 22 (guest) => 2222 (host) (adapter 1)
+==> homestead: Running 'pre-boot' VM customizations...
+==> homestead: Booting VM...
+==> homestead: Waiting for machine to boot. This may take a few minutes...
+    homestead: SSH address: 127.0.0.1:2222
+    homestead: SSH username: vagrant
+    homestead: SSH auth method: private key
+    homestead: Warning: Connection reset. Retrying...
+    homestead: Warning: Connection aborted. Retrying...
+==> homestead: Machine booted and ready!
+==> homestead: Checking for guest additions in VM...
+==> homestead: Setting hostname...
+==> homestead: Configuring and enabling network interfaces...
+==> homestead: Mounting shared folders...
+    homestead: /vagrant => C:/Users/Trash/Desktop/Proyectosv/homestead
+    homestead: /home/vagrant/projects => C:/Users/Trash/Desktop/Proyectosv
+==> homestead: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> homestead: flag to force provisioning. Provisioners marked to run always will still run.
+
+C:\Users\Trash\Desktop\Proyectosv\homestead>vagrant ssh
+Welcome to Ubuntu 18.04.4 LTS (GNU/Linux 4.15.0-96-generic x86_64)
+
+Thanks for using
+ _                               _                 _
+| |                             | |               | |
+| |__   ___  _ __ ___   ___  ___| |_ ___  __ _  __| |
+| '_ \ / _ \| '_ ` _ \ / _ \/ __| __/ _ \/ _` |/ _` |
+| | | | (_) | | | | | |  __/\__ \ ||  __/ (_| | (_| |
+|_| |_|\___/|_| |_| |_|\___||___/\__\___|\__,_|\__,_|
+
+* Homestead v10.8.0
+* Settler v9.5.1 (Virtualbox, Parallels, Hyper-V, VMware)
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Tue May  5 10:20:34 2020 from 10.0.2.2
+vagrant@homestead:~$ cd projects/social/
+vagrant@homestead:~/projects/social$ npm install
+npm WARN deprecated fsevents@1.2.12: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+
+> uglifyjs-webpack-plugin@0.4.6 postinstall /home/vagrant/projects/social/node_modules/webpack/node_modules/uglifyjs-webpack-plugin
+> node lib/post_install.js
+
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.2.7 (node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.12: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN ajv-keywords@3.4.1 requires a peer of ajv@^6.9.1 but none is installed. You must install peer dependencies yourself.
+npm WARN img-loader@3.0.1 requires a peer of imagemin@^5.0.0 || ^6.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: abbrev@1.1.1 (node_modules/chokidar/node_modules/fsevents/node_modules/abbrev):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/abbrev' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.abbrev.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: ansi-regex@2.1.1 (node_modules/chokidar/node_modules/fsevents/node_modules/ansi-regex):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/ansi-regex' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.ansi-regex.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: aproba@1.2.0 (node_modules/chokidar/node_modules/fsevents/node_modules/aproba):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/aproba' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.aproba.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: balanced-match@1.0.0 (node_modules/chokidar/node_modules/fsevents/node_modules/balanced-match):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/balanced-match' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.balanced-match.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: chownr@1.1.4 (node_modules/chokidar/node_modules/fsevents/node_modules/chownr):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/chownr' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.chownr.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: code-point-at@1.1.0 (node_modules/chokidar/node_modules/fsevents/node_modules/code-point-at):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/code-point-at' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.code-point-at.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: concat-map@0.0.1 (node_modules/chokidar/node_modules/fsevents/node_modules/concat-map):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/concat-map' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.concat-map.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: console-control-strings@1.1.0 (node_modules/chokidar/node_modules/fsevents/node_modules/console-control-strings):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/console-control-strings' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.console-control-strings.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: core-util-is@1.0.2 (node_modules/chokidar/node_modules/fsevents/node_modules/core-util-is):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/core-util-is' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.core-util-is.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: deep-extend@0.6.0 (node_modules/chokidar/node_modules/fsevents/node_modules/deep-extend):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/deep-extend' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.deep-extend.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: delegates@1.0.0 (node_modules/chokidar/node_modules/fsevents/node_modules/delegates):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/delegates' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.delegates.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: detect-libc@1.0.3 (node_modules/chokidar/node_modules/fsevents/node_modules/detect-libc):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/detect-libc' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.detect-libc.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fs.realpath@1.0.0 (node_modules/chokidar/node_modules/fsevents/node_modules/fs.realpath):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/fs.realpath' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.fs.realpath.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: has-unicode@2.0.1 (node_modules/chokidar/node_modules/fsevents/node_modules/has-unicode):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/has-unicode' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.has-unicode.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: inherits@2.0.4 (node_modules/chokidar/node_modules/fsevents/node_modules/inherits):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/inherits' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.inherits.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: ini@1.3.5 (node_modules/chokidar/node_modules/fsevents/node_modules/ini):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/ini' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.ini.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: isarray@1.0.0 (node_modules/chokidar/node_modules/fsevents/node_modules/isarray):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/isarray' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.isarray.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: minimist@1.2.5 (node_modules/chokidar/node_modules/fsevents/node_modules/minimist):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/minimist' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.minimist.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: ms@2.1.2 (node_modules/chokidar/node_modules/fsevents/node_modules/ms):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/ms' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.ms.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: npm-normalize-package-bin@1.0.1 (node_modules/chokidar/node_modules/fsevents/node_modules/npm-normalize-package-bin):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/npm-normalize-package-bin' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.npm-normalize-package-bin.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: number-is-nan@1.0.1 (node_modules/chokidar/node_modules/fsevents/node_modules/number-is-nan):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/number-is-nan' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.number-is-nan.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: object-assign@4.1.1 (node_modules/chokidar/node_modules/fsevents/node_modules/object-assign):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/object-assign' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.object-assign.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: os-homedir@1.0.2 (node_modules/chokidar/node_modules/fsevents/node_modules/os-homedir):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/os-homedir' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.os-homedir.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: os-tmpdir@1.0.2 (node_modules/chokidar/node_modules/fsevents/node_modules/os-tmpdir):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/os-tmpdir' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.os-tmpdir.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: path-is-absolute@1.0.1 (node_modules/chokidar/node_modules/fsevents/node_modules/path-is-absolute):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/path-is-absolute' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.path-is-absolute.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: process-nextick-args@2.0.1 (node_modules/chokidar/node_modules/fsevents/node_modules/process-nextick-args):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/process-nextick-args' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.process-nextick-args.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: safe-buffer@5.1.2 (node_modules/chokidar/node_modules/fsevents/node_modules/safe-buffer):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/safe-buffer' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.safe-buffer.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: safer-buffer@2.1.2 (node_modules/chokidar/node_modules/fsevents/node_modules/safer-buffer):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/safer-buffer' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.safer-buffer.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: sax@1.2.4 (node_modules/chokidar/node_modules/fsevents/node_modules/sax):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/sax' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.sax.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: semver@5.7.1 (node_modules/chokidar/node_modules/fsevents/node_modules/semver):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/semver' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.semver.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: set-blocking@2.0.0 (node_modules/chokidar/node_modules/fsevents/node_modules/set-blocking):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/set-blocking' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.set-blocking.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: signal-exit@3.0.2 (node_modules/chokidar/node_modules/fsevents/node_modules/signal-exit):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/signal-exit' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.signal-exit.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: strip-json-comments@2.0.1 (node_modules/chokidar/node_modules/fsevents/node_modules/strip-json-comments):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/strip-json-comments' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.strip-json-comments.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: util-deprecate@1.0.2 (node_modules/chokidar/node_modules/fsevents/node_modules/util-deprecate):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/util-deprecate' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.util-deprecate.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: wrappy@1.0.2 (node_modules/chokidar/node_modules/fsevents/node_modules/wrappy):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/wrappy' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.wrappy.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: yallist@3.1.1 (node_modules/chokidar/node_modules/fsevents/node_modules/yallist):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/yallist' -> '/home/vagrant/projects/social/node_modules/chokidar/node_modules/fsevents/node_modules/.yallist.DELETE'
+
+added 10 packages from 118 contributors, removed 1 package and audited 13105 packages in 21.049s
+
+23 packages are looking for funding
+  run `npm fund` for details
+
+found 14 vulnerabilities (5 low, 5 moderate, 4 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+vagrant@homestead:~/projects/social$ npm run dev
+
+> @ dev /home/vagrant/projects/social
+> npm run development
+
+
+> @ development /home/vagrant/projects/social
+> cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js
+
+sh: 1: cross-env: not found
+npm ERR! code ELIFECYCLE
+npm ERR! syscall spawn
+npm ERR! file sh
+npm ERR! errno ENOENT
+npm ERR! @ development: `cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js`
+npm ERR! spawn ENOENT
+npm ERR!
+npm ERR! Failed at the @ development script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/vagrant/.npm/_logs/2020-05-05T11_19_57_279Z-debug.log
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @ dev: `npm run development`
+npm ERR! Exit status 1
+npm ERR!
+npm ERR! Failed at the @ dev script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/vagrant/.npm/_logs/2020-05-05T11_19_57_301Z-debug.log
+vagrant@homestead:~/projects/social$ npm install --no-bin-links
+npm WARN ajv-keywords@3.4.1 requires a peer of ajv@^6.9.1 but none is installed. You must install peer dependencies yourself.
+npm WARN img-loader@3.0.1 requires a peer of imagemin@^5.0.0 || ^6.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.12 (node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.12: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+audited 13105 packages in 31.522s
+
+23 packages are looking for funding
+  run `npm fund` for details
+
+found 14 vulnerabilities (5 low, 5 moderate, 4 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+vagrant@homestead:~/projects/social$ npm run dev
+
+> @ dev /home/vagrant/projects/social
+> npm run development
+
+
+> @ development /home/vagrant/projects/social
+> cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js
+
+sh: 1: cross-env: not found
+npm ERR! code ELIFECYCLE
+npm ERR! syscall spawn
+npm ERR! file sh
+npm ERR! errno ENOENT
+npm ERR! @ development: `cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js`
+npm ERR! spawn ENOENT
+npm ERR!
+npm ERR! Failed at the @ development script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/vagrant/.npm/_logs/2020-05-05T11_23_11_315Z-debug.log
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @ dev: `npm run development`
+npm ERR! Exit status 1
+npm ERR!
+npm ERR! Failed at the @ dev script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/vagrant/.npm/_logs/2020-05-05T11_23_11_332Z-debug.log
+vagrant@homestead:~/projects/social$ npm audit fix
+npm ERR! code ENOAUDIT
+npm ERR! audit Your configured registry (https://registry.npmjs.org/) may not support audit requests, or the audit endpoint may be temporarily unavailable.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/vagrant/.npm/_logs/2020-05-05T11_23_52_442Z-debug.log
+vagrant@homestead:~/projects/social$ rm -rf node_modules
+vagrant@homestead:~/projects/social$ rm package-lock.json yarn.lock
+rm: cannot remove 'yarn.lock': No such file or directory
+vagrant@homestead:~/projects/social$ npm cache clear --force
+npm WARN using --force I sure hope you know what you are doing.
+vagrant@homestead:~/projects/social$ npm install
+npm WARN deprecated extract-text-webpack-plugin@3.0.2: Deprecated. Please use https://github.com/webpack-contrib/mini-css-extract-plugin
+npm WARN deprecated browserslist@2.11.3: Browserslist 2 could fail on reading Browserslist >3.0 config used in other tools.
+npm WARN deprecated chokidar@2.1.8: Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies.
+npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated core-js@2.6.11: core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3.
+npm WARN deprecated fsevents@1.2.12: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+npm WARN deprecated browserslist@1.7.7: Browserslist 2 could fail on reading Browserslist >3.0 config used in other tools.
+npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+
+> node-sass@4.14.1 install /home/vagrant/projects/social/node_modules/node-sass
+> node scripts/install.js
+
+Downloading binary from https://github.com/sass/node-sass/releases/download/v4.14.1/linux-x64-72_binding.node
+Download complete  ] - :
+Binary saved to /home/vagrant/projects/social/node_modules/node-sass/vendor/linux-x64-72/binding.node
+Caching binary to /home/vagrant/.npm/node-sass/4.14.1/linux-x64-72_binding.node
+
+> core-js@2.6.11 postinstall /home/vagrant/projects/social/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+
+The project needs your help! Please consider supporting of core-js on Open Collective or Patreon:
+> https://opencollective.com/core-js
+> https://www.patreon.com/zloirock
+
+Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+
+
+> uglifyjs-webpack-plugin@0.4.6 postinstall /home/vagrant/projects/social/node_modules/webpack/node_modules/uglifyjs-webpack-plugin
+> node lib/post_install.js
+
+
+> node-sass@4.14.1 postinstall /home/vagrant/projects/social/node_modules/node-sass
+> node scripts/build.js
+
+Binary found at /home/vagrant/projects/social/node_modules/node-sass/vendor/linux-x64-72/binding.node
+Testing binary
+Binary is fine
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.2.7 (node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.12: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN img-loader@3.0.1 requires a peer of imagemin@^5.0.0 || ^6.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN ajv-keywords@3.4.1 requires a peer of ajv@^6.9.1 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: abbrev@1.1.1 (node_modules/fsevents/node_modules/abbrev):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/abbrev' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.abbrev.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: ansi-regex@2.1.1 (node_modules/fsevents/node_modules/ansi-regex):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/ansi-regex' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.ansi-regex.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: aproba@1.2.0 (node_modules/fsevents/node_modules/aproba):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/aproba' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.aproba.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: balanced-match@1.0.0 (node_modules/fsevents/node_modules/balanced-match):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/balanced-match' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.balanced-match.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: chownr@1.1.4 (node_modules/fsevents/node_modules/chownr):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/chownr' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.chownr.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: code-point-at@1.1.0 (node_modules/fsevents/node_modules/code-point-at):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/code-point-at' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.code-point-at.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: concat-map@0.0.1 (node_modules/fsevents/node_modules/concat-map):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/concat-map' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.concat-map.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: console-control-strings@1.1.0 (node_modules/fsevents/node_modules/console-control-strings):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/console-control-strings' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.console-control-strings.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: core-util-is@1.0.2 (node_modules/fsevents/node_modules/core-util-is):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/core-util-is' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.core-util-is.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: deep-extend@0.6.0 (node_modules/fsevents/node_modules/deep-extend):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/deep-extend' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.deep-extend.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: delegates@1.0.0 (node_modules/fsevents/node_modules/delegates):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/delegates' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.delegates.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: detect-libc@1.0.3 (node_modules/fsevents/node_modules/detect-libc):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/detect-libc' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.detect-libc.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fs.realpath@1.0.0 (node_modules/fsevents/node_modules/fs.realpath):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/fs.realpath' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.fs.realpath.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: has-unicode@2.0.1 (node_modules/fsevents/node_modules/has-unicode):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/has-unicode' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.has-unicode.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: inherits@2.0.4 (node_modules/fsevents/node_modules/inherits):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/inherits' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.inherits.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: ini@1.3.5 (node_modules/fsevents/node_modules/ini):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/ini' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.ini.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: isarray@1.0.0 (node_modules/fsevents/node_modules/isarray):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/isarray' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.isarray.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: minimist@1.2.5 (node_modules/fsevents/node_modules/minimist):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/minimist' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.minimist.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: ms@2.1.2 (node_modules/fsevents/node_modules/ms):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/ms' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.ms.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: npm-normalize-package-bin@1.0.1 (node_modules/fsevents/node_modules/npm-normalize-package-bin):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/npm-normalize-package-bin' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.npm-normalize-package-bin.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: number-is-nan@1.0.1 (node_modules/fsevents/node_modules/number-is-nan):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/number-is-nan' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.number-is-nan.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: object-assign@4.1.1 (node_modules/fsevents/node_modules/object-assign):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/object-assign' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.object-assign.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: os-homedir@1.0.2 (node_modules/fsevents/node_modules/os-homedir):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/os-homedir' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.os-homedir.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: os-tmpdir@1.0.2 (node_modules/fsevents/node_modules/os-tmpdir):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/os-tmpdir' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.os-tmpdir.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: path-is-absolute@1.0.1 (node_modules/fsevents/node_modules/path-is-absolute):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/path-is-absolute' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.path-is-absolute.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: process-nextick-args@2.0.1 (node_modules/fsevents/node_modules/process-nextick-args):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/process-nextick-args' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.process-nextick-args.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: safe-buffer@5.1.2 (node_modules/fsevents/node_modules/safe-buffer):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/safe-buffer' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.safe-buffer.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: safer-buffer@2.1.2 (node_modules/fsevents/node_modules/safer-buffer):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/safer-buffer' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.safer-buffer.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: sax@1.2.4 (node_modules/fsevents/node_modules/sax):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/sax' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.sax.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: semver@5.7.1 (node_modules/fsevents/node_modules/semver):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/semver' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.semver.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: set-blocking@2.0.0 (node_modules/fsevents/node_modules/set-blocking):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/set-blocking' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.set-blocking.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: signal-exit@3.0.2 (node_modules/fsevents/node_modules/signal-exit):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/signal-exit' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.signal-exit.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: strip-json-comments@2.0.1 (node_modules/fsevents/node_modules/strip-json-comments):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/strip-json-comments' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.strip-json-comments.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: util-deprecate@1.0.2 (node_modules/fsevents/node_modules/util-deprecate):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/util-deprecate' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.util-deprecate.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: wrappy@1.0.2 (node_modules/fsevents/node_modules/wrappy):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/wrappy' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.wrappy.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: yallist@3.1.1 (node_modules/fsevents/node_modules/yallist):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/yallist' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.yallist.DELETE'
+
+added 1209 packages from 698 contributors and audited 13105 packages in 490.26s
+
+23 packages are looking for funding
+  run `npm fund` for details
+
+found 14 vulnerabilities (5 low, 5 moderate, 4 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+vagrant@homestead:~/projects/social$ npm run dev
+
+> @ dev /home/vagrant/projects/social
+> npm run development
+
+
+> @ development /home/vagrant/projects/social
+> cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js
+
+Additional dependencies must be installed. This will only take a moment.
+npm WARN ajv-keywords@3.4.1 requires a peer of ajv@^6.9.1 but none is installed. You must install peer dependencies yourself.
+npm WARN img-loader@3.0.1 requires a peer of imagemin@^5.0.0 || ^6.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.12 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.12: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+Finished. Please run Mix again.
+/home/vagrant/projects/social/node_modules/laravel-mix/src/Dependencies.js:41
+            process.exit();
+                    ^
+
+TypeError: process.exit is not a function
+    at Dependencies.execute (/home/vagrant/projects/social/node_modules/laravel-mix/src/Dependencies.js:41:21)
+    at /home/vagrant/projects/social/node_modules/laravel-mix/src/Dependencies.js:19:22
+    at Array.value (/home/vagrant/projects/social/node_modules/laravel-mix/src/helpers.js:24:13)
+    at Dependencies.install (/home/vagrant/projects/social/node_modules/laravel-mix/src/Dependencies.js:18:14)
+    at Function.dependencies (/home/vagrant/projects/social/node_modules/laravel-mix/src/Assert.js:77:40)
+    at /home/vagrant/projects/social/node_modules/laravel-mix/src/components/ComponentFactory.js:131:24
+    at Array.value (/home/vagrant/projects/social/node_modules/laravel-mix/src/helpers.js:24:13)
+    at ComponentFactory.installDependencies (/home/vagrant/projects/social/node_modules/laravel-mix/src/components/ComponentFactory.js:130:14)
+    at /home/vagrant/projects/social/node_modules/laravel-mix/src/components/ComponentFactory.js:55:44
+    at /home/vagrant/projects/social/node_modules/laravel-mix/src/Dispatcher.js:34:47
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @ development: `cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js`
+npm ERR! Exit status 1
+npm ERR!
+npm ERR! Failed at the @ development script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/vagrant/.npm/_logs/2020-05-05T11_53_53_256Z-debug.log
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @ dev: `npm run development`
+npm ERR! Exit status 1
+npm ERR!
+npm ERR! Failed at the @ dev script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/vagrant/.npm/_logs/2020-05-05T11_53_53_275Z-debug.log
+vagrant@homestead:~/projects/social$ npm run watch
+
+> @ watch /home/vagrant/projects/social
+> npm run development -- --watch
+
+
+> @ development /home/vagrant/projects/social
+> cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js "--watch"
+
+ 10% building modules 1/1 modules 0 active
+Webpack is watching the files…
+
+ 95% emitting
+
+ ERROR  Failed to compile with 1 errors                                                                      12:51:29 PM
+
+This dependency was not found:
+
+* popper.js in ./resources/assets/js/bootstrap.js
+
+To install it, you can run: npm install --save popper.js
+       Asset     Size  Chunks                    Chunk Names
+  /js/app.js   590 kB       0  [emitted]  [big]  /js/app
+/css/app.css  0 bytes       0  [emitted]         /js/app
+
+WARNING in ./resources/assets/js/bootstrap.js
+Module not found: Error: Can't resolve 'bootstrap' in '/home/vagrant/projects/social/resources/assets/js'
+ @ ./resources/assets/js/bootstrap.js 14:2-22
+ @ ./resources/assets/js/app.js
+ @ multi ./resources/assets/js/app.js ./resources/assets/sass/app.scss
+
+WARNING in ./resources/assets/js/bootstrap.js
+Module not found: Error: Can't resolve 'jquery' in '/home/vagrant/projects/social/resources/assets/js'
+ @ ./resources/assets/js/bootstrap.js 12:29-46
+ @ ./resources/assets/js/app.js
+ @ multi ./resources/assets/js/app.js ./resources/assets/sass/app.scss
+
+ERROR in ./resources/assets/js/bootstrap.js
+Module not found: Error: Can't resolve 'popper.js' in '/home/vagrant/projects/social/resources/assets/js'
+ @ ./resources/assets/js/bootstrap.js 3:16-36
+ @ ./resources/assets/js/app.js
+ @ multi ./resources/assets/js/app.js ./resources/assets/sass/app.scss
+[Browsersync] Proxying: http://social.local
+[Browsersync] Access URLs:
+ ----------------------------------
+       Local: http://localhost:3000
+    External: http://10.0.2.15:3000
+ ----------------------------------
+          UI: http://localhost:3001
+ UI External: http://localhost:3001
+ ----------------------------------
+[Browsersync] Watching files...
+^Z
+[1]+  Stopped                 npm run watch
+vagrant@homestead:~/projects/social$ npm install --save popper.js
+npm WARN deprecated popper.js@1.16.1: You can find the new Popper v2 at @popperjs/core, this package is dedicated to the legacy v1
+npm WARN ajv-keywords@3.4.1 requires a peer of ajv@^6.9.1 but none is installed. You must install peer dependencies yourself.
+npm WARN img-loader@3.0.1 requires a peer of imagemin@^5.0.0 || ^6.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.12 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.12: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
++ popper.js@1.16.1
+added 1 package from 2 contributors and audited 16610 packages in 31.013s
+
+24 packages are looking for funding
+  run `npm fund` for details
+
+found 16 vulnerabilities (7 low, 5 moderate, 4 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+vagrant@homestead:~/projects/social$ npm run watch
+
+> @ watch /home/vagrant/projects/social
+> npm run development -- --watch
+
+
+> @ development /home/vagrant/projects/social
+> cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js "--watch"
+
+ 10% building modules 1/1 modules 0 active
+Webpack is watching the files…
+
+ 95% emitting
+
+ WARNING  Compiled with 2 warnings                                                                           12:56:18 PM
+
+These dependencies were not found:
+
+* bootstrap in ./resources/assets/js/bootstrap.js
+* jquery in ./resources/assets/js/bootstrap.js
+
+To install them, you can run: npm install --save bootstrap jquery
+       Asset     Size  Chunks                    Chunk Names
+  /js/app.js   679 kB       0  [emitted]  [big]  /js/app
+/css/app.css  0 bytes       0  [emitted]         /js/app
+
+WARNING in ./resources/assets/js/bootstrap.js
+Module not found: Error: Can't resolve 'bootstrap' in '/home/vagrant/projects/social/resources/assets/js'
+ @ ./resources/assets/js/bootstrap.js 14:2-22
+ @ ./resources/assets/js/app.js
+ @ multi ./resources/assets/js/app.js ./resources/assets/sass/app.scss
+
+WARNING in ./resources/assets/js/bootstrap.js
+Module not found: Error: Can't resolve 'jquery' in '/home/vagrant/projects/social/resources/assets/js'
+ @ ./resources/assets/js/bootstrap.js 12:29-46
+ @ ./resources/assets/js/app.js
+ @ multi ./resources/assets/js/app.js ./resources/assets/sass/app.scss
+[Browsersync] Proxying: http://social.local
+[Browsersync] Access URLs:
+ ----------------------------------
+       Local: http://localhost:3002
+    External: http://10.0.2.15:3002
+ ----------------------------------
+          UI: http://localhost:3003
+ UI External: http://localhost:3003
+ ----------------------------------
+[Browsersync] Watching files...
+^Z
+[2]+  Stopped                 npm run watch
+vagrant@homestead:~/projects/social$ npm install --save bootstrap jquery
+npm WARN rollback Rolling back fsevents@1.2.12 failed (this is probably harmless): ETXTBSY: text file is busy, rmdir '/home/vagrant/projects/social/node_modules/fsevents/node_modules'
+npm WARN ajv-keywords@3.4.1 requires a peer of ajv@^6.9.1 but none is installed. You must install peer dependencies yourself.
+npm WARN img-loader@3.0.1 requires a peer of imagemin@^5.0.0 || ^6.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.12 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.12: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
++ jquery@3.5.1
++ bootstrap@4.4.1
+added 2 packages from 3 contributors and audited 16612 packages in 30.972s
+
+25 packages are looking for funding
+  run `npm fund` for details
+
+found 16 vulnerabilities (7 low, 5 moderate, 4 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+vagrant@homestead:~/projects/social$ npm run watch
+
+> @ watch /home/vagrant/projects/social
+> npm run development -- --watch
+
+
+> @ development /home/vagrant/projects/social
+> cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js "--watch"
+
+ 10% building modules 1/1 modules 0 active
+Webpack is watching the files…
+
+ 95% emitting
+
+ DONE  Compiled successfully in 3933ms                                                                       12:59:10 PM
+
+       Asset     Size  Chunks                    Chunk Names
+  /js/app.js   1.1 MB       0  [emitted]  [big]  /js/app
+/css/app.css  0 bytes       0  [emitted]         /js/app
+[Browsersync] Proxying: http://social.local
+[Browsersync] Access URLs:
+ ----------------------------------
+       Local: http://localhost:3004
+    External: http://10.0.2.15:3004
+ ----------------------------------
+          UI: http://localhost:3005
+ UI External: http://localhost:3005
+ ----------------------------------
+[Browsersync] Watching files...
+^Z
+[3]+  Stopped                 npm run watch
+vagrant@homestead:~/projects/social$ npm run dev
+
+> @ dev /home/vagrant/projects/social
+> npm run development
+
+
+> @ development /home/vagrant/projects/social
+> cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js
+
+ 95% emitting
+
+ DONE  Compiled successfully in 4221ms                                                                        1:01:29 PM
+
+       Asset     Size  Chunks                    Chunk Names
+  /js/app.js   1.1 MB       0  [emitted]  [big]  /js/app
+/css/app.css  0 bytes       0  [emitted]         /js/app
+vagrant@homestead:~/projects/social$ npm run watch
+
+> @ watch /home/vagrant/projects/social
+> npm run development -- --watch
+
+
+> @ development /home/vagrant/projects/social
+> cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js "--watch"
+
+ 10% building modules 1/1 modules 0 active
+Webpack is watching the files…
+
+ 95% emitting
+
+ DONE  Compiled successfully in 4473ms                                                                        1:03:27 PM
+
+       Asset     Size  Chunks                    Chunk Names
+  /js/app.js   1.1 MB       0  [emitted]  [big]  /js/app
+/css/app.css  0 bytes       0  [emitted]         /js/app
+[Browsersync] Proxying: http://social.local
+[Browsersync] Access URLs:
+ ----------------------------------
+       Local: http://localhost:3006
+    External: http://10.0.2.15:3006
+ ----------------------------------
+          UI: http://localhost:3007
+ UI External: http://localhost:3007
+ ----------------------------------
+[Browsersync] Watching files...
+^Z
+[4]+  Stopped                 npm run watch
+vagrant@homestead:~/projects/social$ rm -rf node_modules
+rm: cannot remove 'node_modules/node-sass/vendor/linux-x64-72/binding.node': Text file busy
+vagrant@homestead:~/projects/social$ rm package-lock.json yarn.lock
+rm: cannot remove 'yarn.lock': No such file or directory
+vagrant@homestead:~/projects/social$ npm cache clear --force
+npm WARN using --force I sure hope you know what you are doing.
+vagrant@homestead:~/projects/social$ npm install
+npm WARN deprecated popper.js@1.16.1: You can find the new Popper v2 at @popperjs/core, this package is dedicated to the legacy v1
+npm WARN deprecated chokidar@2.1.8: Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies.
+npm WARN deprecated extract-text-webpack-plugin@3.0.2: Deprecated. Please use https://github.com/webpack-contrib/mini-css-extract-plugin
+npm WARN deprecated fsevents@1.2.12: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+npm WARN deprecated browserslist@2.11.3: Browserslist 2 could fail on reading Browserslist >3.0 config used in other tools.
+npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated core-js@2.6.11: core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3.
+npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+npm WARN deprecated browserslist@1.7.7: Browserslist 2 could fail on reading Browserslist >3.0 config used in other tools.
+
+> node-sass@4.14.1 install /home/vagrant/projects/social/node_modules/laravel-mix/node_modules/node-sass
+> node scripts/install.js
+
+Cached binary found at /home/vagrant/.npm/node-sass/4.14.1/linux-x64-72_binding.node
+
+> core-js@2.6.11 postinstall /home/vagrant/projects/social/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+
+The project needs your help! Please consider supporting of core-js on Open Collective or Patreon:
+> https://opencollective.com/core-js
+> https://www.patreon.com/zloirock
+
+Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+
+
+> uglifyjs-webpack-plugin@0.4.6 postinstall /home/vagrant/projects/social/node_modules/webpack/node_modules/uglifyjs-webpack-plugin
+> node lib/post_install.js
+
+
+> node-sass@4.14.1 postinstall /home/vagrant/projects/social/node_modules/laravel-mix/node_modules/node-sass
+> node scripts/build.js
+
+Binary found at /home/vagrant/projects/social/node_modules/laravel-mix/node_modules/node-sass/vendor/linux-x64-72/binding.node
+Testing binary
+Binary is fine
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.2.7 (node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.12: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN img-loader@3.0.1 requires a peer of imagemin@^5.0.0 || ^6.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN sass-loader@6.0.7 requires a peer of node-sass@^4.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN ajv-keywords@3.4.1 requires a peer of ajv@^6.9.1 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: abbrev@1.1.1 (node_modules/fsevents/node_modules/abbrev):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/abbrev' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.abbrev.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: ansi-regex@2.1.1 (node_modules/fsevents/node_modules/ansi-regex):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/ansi-regex' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.ansi-regex.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: aproba@1.2.0 (node_modules/fsevents/node_modules/aproba):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/aproba' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.aproba.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: balanced-match@1.0.0 (node_modules/fsevents/node_modules/balanced-match):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/balanced-match' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.balanced-match.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: chownr@1.1.4 (node_modules/fsevents/node_modules/chownr):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/chownr' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.chownr.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: code-point-at@1.1.0 (node_modules/fsevents/node_modules/code-point-at):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/code-point-at' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.code-point-at.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: concat-map@0.0.1 (node_modules/fsevents/node_modules/concat-map):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/concat-map' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.concat-map.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: console-control-strings@1.1.0 (node_modules/fsevents/node_modules/console-control-strings):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/console-control-strings' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.console-control-strings.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: core-util-is@1.0.2 (node_modules/fsevents/node_modules/core-util-is):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/core-util-is' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.core-util-is.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: deep-extend@0.6.0 (node_modules/fsevents/node_modules/deep-extend):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/deep-extend' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.deep-extend.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: delegates@1.0.0 (node_modules/fsevents/node_modules/delegates):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/delegates' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.delegates.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: detect-libc@1.0.3 (node_modules/fsevents/node_modules/detect-libc):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/detect-libc' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.detect-libc.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fs.realpath@1.0.0 (node_modules/fsevents/node_modules/fs.realpath):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/fs.realpath' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.fs.realpath.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: has-unicode@2.0.1 (node_modules/fsevents/node_modules/has-unicode):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/has-unicode' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.has-unicode.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: inherits@2.0.4 (node_modules/fsevents/node_modules/inherits):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/inherits' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.inherits.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: ini@1.3.5 (node_modules/fsevents/node_modules/ini):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/ini' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.ini.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: isarray@1.0.0 (node_modules/fsevents/node_modules/isarray):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/isarray' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.isarray.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: minimist@1.2.5 (node_modules/fsevents/node_modules/minimist):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/minimist' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.minimist.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: ms@2.1.2 (node_modules/fsevents/node_modules/ms):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/ms' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.ms.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: npm-normalize-package-bin@1.0.1 (node_modules/fsevents/node_modules/npm-normalize-package-bin):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/npm-normalize-package-bin' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.npm-normalize-package-bin.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: number-is-nan@1.0.1 (node_modules/fsevents/node_modules/number-is-nan):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/number-is-nan' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.number-is-nan.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: object-assign@4.1.1 (node_modules/fsevents/node_modules/object-assign):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/object-assign' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.object-assign.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: os-homedir@1.0.2 (node_modules/fsevents/node_modules/os-homedir):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/os-homedir' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.os-homedir.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: os-tmpdir@1.0.2 (node_modules/fsevents/node_modules/os-tmpdir):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/os-tmpdir' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.os-tmpdir.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: path-is-absolute@1.0.1 (node_modules/fsevents/node_modules/path-is-absolute):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/path-is-absolute' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.path-is-absolute.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: process-nextick-args@2.0.1 (node_modules/fsevents/node_modules/process-nextick-args):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/process-nextick-args' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.process-nextick-args.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: safe-buffer@5.1.2 (node_modules/fsevents/node_modules/safe-buffer):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/safe-buffer' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.safe-buffer.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: safer-buffer@2.1.2 (node_modules/fsevents/node_modules/safer-buffer):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/safer-buffer' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.safer-buffer.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: sax@1.2.4 (node_modules/fsevents/node_modules/sax):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/sax' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.sax.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: semver@5.7.1 (node_modules/fsevents/node_modules/semver):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/semver' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.semver.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: set-blocking@2.0.0 (node_modules/fsevents/node_modules/set-blocking):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/set-blocking' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.set-blocking.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: signal-exit@3.0.2 (node_modules/fsevents/node_modules/signal-exit):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/signal-exit' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.signal-exit.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: strip-json-comments@2.0.1 (node_modules/fsevents/node_modules/strip-json-comments):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/strip-json-comments' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.strip-json-comments.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: util-deprecate@1.0.2 (node_modules/fsevents/node_modules/util-deprecate):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/util-deprecate' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.util-deprecate.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: wrappy@1.0.2 (node_modules/fsevents/node_modules/wrappy):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/wrappy' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.wrappy.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: yallist@3.1.1 (node_modules/fsevents/node_modules/yallist):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/home/vagrant/projects/social/node_modules/fsevents/node_modules/yallist' -> '/home/vagrant/projects/social/node_modules/fsevents/node_modules/.yallist.DELETE'
+
+added 1210 packages from 799 contributors and audited 16622 packages in 255.051s
+
+25 packages are looking for funding
+  run `npm fund` for details
+
+found 16 vulnerabilities (7 low, 5 moderate, 4 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+vagrant@homestead:~/projects/social$ npm run dev
+
+> @ dev /home/vagrant/projects/social
+> npm run development
+
+
+> @ development /home/vagrant/projects/social
+> cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js
+
+ 95% emitting
+
+ ERROR  Failed to compile with 2 errors                                                                       1:32:01 PM
+
+ error  in ./resources/assets/sass/app.scss
+
+Module build failed: Error: Cannot find module 'node-sass'
+Require stack:
+- /home/vagrant/projects/social/node_modules/sass-loader/lib/loader.js
+- /home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js
+- /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/Compiler.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/webpack.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/src/Api.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/src/index.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/setup/webpack.config.js
+- /home/vagrant/projects/social/node_modules/webpack/bin/convert-argv.js
+- /home/vagrant/projects/social/node_modules/webpack/bin/webpack.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:980:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:862:27)
+    at Module.require (internal/modules/cjs/loader.js:1042:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (/home/vagrant/projects/social/node_modules/sass-loader/lib/loader.js:3:14)
+    at Module._compile (internal/modules/cjs/loader.js:1156:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)
+    at Module.load (internal/modules/cjs/loader.js:1000:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:899:14)
+    at Module.require (internal/modules/cjs/loader.js:1042:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:18:17)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at runLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:365:2)
+    at NormalModule.doBuild (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:182:3)
+    at NormalModule.build (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:275:15)
+    at Compilation.buildModule (/home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:157:10)
+    at factoryCallback (/home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:348:12)
+
+ @ ./resources/assets/sass/app.scss 4:14-266
+ @ multi ./resources/assets/js/app.js ./resources/assets/sass/app.scss
+
+ error  in ./resources/assets/sass/app.scss
+
+Module build failed: ModuleBuildError: Module build failed: Error: Cannot find module 'node-sass'
+Require stack:
+- /home/vagrant/projects/social/node_modules/sass-loader/lib/loader.js
+- /home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js
+- /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/Compiler.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/webpack.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/src/Api.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/src/index.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/setup/webpack.config.js
+- /home/vagrant/projects/social/node_modules/webpack/bin/convert-argv.js
+- /home/vagrant/projects/social/node_modules/webpack/bin/webpack.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:980:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:862:27)
+    at Module.require (internal/modules/cjs/loader.js:1042:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (/home/vagrant/projects/social/node_modules/sass-loader/lib/loader.js:3:14)
+    at Module._compile (internal/modules/cjs/loader.js:1156:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)
+    at Module.load (internal/modules/cjs/loader.js:1000:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:899:14)
+    at Module.require (internal/modules/cjs/loader.js:1042:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:18:17)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at runLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:365:2)
+    at NormalModule.doBuild (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:182:3)
+    at NormalModule.build (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:275:15)
+    at Compilation.buildModule (/home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:157:10)
+    at /home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:460:10
+    at /home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:195:19
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:367:11
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:172:11
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:32:11)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at runLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:365:2)
+    at NormalModule.doBuild (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:182:3)
+    at NormalModule.build (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:275:15)
+    at Compilation.buildModule (/home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:157:10)
+    at /home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:460:10
+    at /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js:243:5
+    at /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js:94:13
+    at /home/vagrant/projects/social/node_modules/tapable/lib/Tapable.js:268:11
+    at NormalModuleFactory.<anonymous> (/home/vagrant/projects/social/node_modules/webpack/lib/CompatibilityPlugin.js:52:5)
+    at NormalModuleFactory.applyPluginsAsyncWaterfall (/home/vagrant/projects/social/node_modules/tapable/lib/Tapable.js:272:13)
+    at /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js:69:10
+    at /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js:196:7
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+
+     Asset     Size  Chunks                    Chunk Names
+/js/app.js  1.11 MB       0  [emitted]  [big]  /js/app
+
+ERROR in ./node_modules/css-loader??ref--5-2!./node_modules/postcss-loader/lib??postcss!./node_modules/resolve-url-loader??ref--5-4!./node_modules/sass-loader/lib/loader.js??ref--5-5!./resources/assets/sass/app.scss
+Module build failed: Error: Cannot find module 'node-sass'
+Require stack:
+- /home/vagrant/projects/social/node_modules/sass-loader/lib/loader.js
+- /home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js
+- /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/Compiler.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/webpack.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/src/Api.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/src/index.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/setup/webpack.config.js
+- /home/vagrant/projects/social/node_modules/webpack/bin/convert-argv.js
+- /home/vagrant/projects/social/node_modules/webpack/bin/webpack.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:980:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:862:27)
+    at Module.require (internal/modules/cjs/loader.js:1042:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (/home/vagrant/projects/social/node_modules/sass-loader/lib/loader.js:3:14)
+    at Module._compile (internal/modules/cjs/loader.js:1156:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)
+    at Module.load (internal/modules/cjs/loader.js:1000:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:899:14)
+    at Module.require (internal/modules/cjs/loader.js:1042:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:18:17)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at runLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:365:2)
+    at NormalModule.doBuild (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:182:3)
+    at NormalModule.build (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:275:15)
+    at Compilation.buildModule (/home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:157:10)
+    at factoryCallback (/home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:348:12)
+ @ ./resources/assets/sass/app.scss 4:14-266
+ @ multi ./resources/assets/js/app.js ./resources/assets/sass/app.scss
+
+ERROR in ./resources/assets/sass/app.scss
+Module build failed: ModuleBuildError: Module build failed: Error: Cannot find module 'node-sass'
+Require stack:
+- /home/vagrant/projects/social/node_modules/sass-loader/lib/loader.js
+- /home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js
+- /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/Compiler.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/webpack.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/src/Api.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/src/index.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/setup/webpack.config.js
+- /home/vagrant/projects/social/node_modules/webpack/bin/convert-argv.js
+- /home/vagrant/projects/social/node_modules/webpack/bin/webpack.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:980:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:862:27)
+    at Module.require (internal/modules/cjs/loader.js:1042:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (/home/vagrant/projects/social/node_modules/sass-loader/lib/loader.js:3:14)
+    at Module._compile (internal/modules/cjs/loader.js:1156:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)
+    at Module.load (internal/modules/cjs/loader.js:1000:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:899:14)
+    at Module.require (internal/modules/cjs/loader.js:1042:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:18:17)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at runLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:365:2)
+    at NormalModule.doBuild (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:182:3)
+    at NormalModule.build (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:275:15)
+    at Compilation.buildModule (/home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:157:10)
+    at /home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:460:10
+    at /home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:195:19
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:367:11
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:172:11
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:32:11)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at runLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:365:2)
+    at NormalModule.doBuild (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:182:3)
+    at NormalModule.build (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:275:15)
+    at Compilation.buildModule (/home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:157:10)
+    at /home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:460:10
+    at /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js:243:5
+    at /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js:94:13
+    at /home/vagrant/projects/social/node_modules/tapable/lib/Tapable.js:268:11
+    at NormalModuleFactory.<anonymous> (/home/vagrant/projects/social/node_modules/webpack/lib/CompatibilityPlugin.js:52:5)
+    at NormalModuleFactory.applyPluginsAsyncWaterfall (/home/vagrant/projects/social/node_modules/tapable/lib/Tapable.js:272:13)
+    at /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js:69:10
+    at /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js:196:7
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+ @ ./resources/assets/sass/app.scss
+ @ multi ./resources/assets/js/app.js ./resources/assets/sass/app.scss
+npm ERR! code ELIFECYCLE
+npm ERR! errno 2
+npm ERR! @ development: `cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js`
+npm ERR! Exit status 2
+npm ERR!
+npm ERR! Failed at the @ development script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/vagrant/.npm/_logs/2020-05-05T13_32_01_830Z-debug.log
+npm ERR! code ELIFECYCLE
+npm ERR! errno 2
+npm ERR! @ dev: `npm run development`
+npm ERR! Exit status 2
+npm ERR!
+npm ERR! Failed at the @ dev script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/vagrant/.npm/_logs/2020-05-05T13_32_01_857Z-debug.log
+vagrant@homestead:~/projects/social$ npm install node-sass
+npm WARN rollback Rolling back node-sass@4.14.1 failed (this is probably harmless): ETXTBSY: text file is busy, unlink '/home/vagrant/projects/social/node_modules/node-sass/vendor/linux-x64-72/binding.node'
+npm WARN ajv-keywords@3.4.1 requires a peer of ajv@^6.9.1 but none is installed. You must install peer dependencies yourself.
+npm WARN img-loader@3.0.1 requires a peer of imagemin@^5.0.0 || ^6.0.0 but none is installed. You must install peer dependencies yourself.
+
+npm ERR! code EPERM
+npm ERR! syscall rename
+npm ERR! path /home/vagrant/projects/social/node_modules/node-sass
+npm ERR! dest /home/vagrant/projects/social/node_modules/.node-sass.DELETE
+npm ERR! errno -1
+npm ERR! Error: EPERM: operation not permitted, rename '/home/vagrant/projects/social/node_modules/node-sass' -> '/home/vagrant/projects/social/node_modules/.node-sass.DELETE'
+npm ERR!  [OperationalError: EPERM: operation not permitted, rename '/home/vagrant/projects/social/node_modules/node-sass' -> '/home/vagrant/projects/social/node_modules/.node-sass.DELETE'] {
+npm ERR!   cause: [Error: EPERM: operation not permitted, rename '/home/vagrant/projects/social/node_modules/node-sass' -> '/home/vagrant/projects/social/node_modules/.node-sass.DELETE'] {
+npm ERR!     errno: -1,
+npm ERR!     code: 'EPERM',
+npm ERR!     syscall: 'rename',
+npm ERR!     path: '/home/vagrant/projects/social/node_modules/node-sass',
+npm ERR!     dest: '/home/vagrant/projects/social/node_modules/.node-sass.DELETE'
+npm ERR!   },
+npm ERR!   stack: "Error: EPERM: operation not permitted, rename '/home/vagrant/projects/social/node_modules/node-sass' -> '/home/vagrant/projects/social/node_modules/.node-sass.DELETE'",
+npm ERR!   errno: -1,
+npm ERR!   code: 'EPERM',
+npm ERR!   syscall: 'rename',
+npm ERR!   path: '/home/vagrant/projects/social/node_modules/node-sass',
+npm ERR!   dest: '/home/vagrant/projects/social/node_modules/.node-sass.DELETE'
+npm ERR! }
+npm ERR!
+npm ERR! The operation was rejected by your operating system.
+npm ERR! It is likely you do not have the permissions to access this file as the current user
+npm ERR!
+npm ERR! If you believe this might be a permissions issue, please double-check the
+npm ERR! permissions of the file and its containing directories, or try running
+npm ERR! the command again as root/Administrator.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/vagrant/.npm/_logs/2020-05-05T13_41_31_288Z-debug.log
+vagrant@homestead:~/projects/social$ npm install node-sass --no-bin-links
+npm WARN rollback Rolling back node-sass@4.14.1 failed (this is probably harmless): ETXTBSY: text file is busy, unlink '/home/vagrant/projects/social/node_modules/node-sass/vendor/linux-x64-72/binding.node'
+npm WARN ajv-keywords@3.4.1 requires a peer of ajv@^6.9.1 but none is installed. You must install peer dependencies yourself.
+npm WARN img-loader@3.0.1 requires a peer of imagemin@^5.0.0 || ^6.0.0 but none is installed. You must install peer dependencies yourself.
+
+npm ERR! code EPERM
+npm ERR! syscall rename
+npm ERR! path /home/vagrant/projects/social/node_modules/node-sass
+npm ERR! dest /home/vagrant/projects/social/node_modules/.node-sass.DELETE
+npm ERR! errno -1
+npm ERR! Error: EPERM: operation not permitted, rename '/home/vagrant/projects/social/node_modules/node-sass' -> '/home/vagrant/projects/social/node_modules/.node-sass.DELETE'
+npm ERR!  [OperationalError: EPERM: operation not permitted, rename '/home/vagrant/projects/social/node_modules/node-sass' -> '/home/vagrant/projects/social/node_modules/.node-sass.DELETE'] {
+npm ERR!   cause: [Error: EPERM: operation not permitted, rename '/home/vagrant/projects/social/node_modules/node-sass' -> '/home/vagrant/projects/social/node_modules/.node-sass.DELETE'] {
+npm ERR!     errno: -1,
+npm ERR!     code: 'EPERM',
+npm ERR!     syscall: 'rename',
+npm ERR!     path: '/home/vagrant/projects/social/node_modules/node-sass',
+npm ERR!     dest: '/home/vagrant/projects/social/node_modules/.node-sass.DELETE'
+npm ERR!   },
+npm ERR!   stack: "Error: EPERM: operation not permitted, rename '/home/vagrant/projects/social/node_modules/node-sass' -> '/home/vagrant/projects/social/node_modules/.node-sass.DELETE'",
+npm ERR!   errno: -1,
+npm ERR!   code: 'EPERM',
+npm ERR!   syscall: 'rename',
+npm ERR!   path: '/home/vagrant/projects/social/node_modules/node-sass',
+npm ERR!   dest: '/home/vagrant/projects/social/node_modules/.node-sass.DELETE'
+npm ERR! }
+npm ERR!
+npm ERR! The operation was rejected by your operating system.
+npm ERR! It is likely you do not have the permissions to access this file as the current user
+npm ERR!
+npm ERR! If you believe this might be a permissions issue, please double-check the
+npm ERR! permissions of the file and its containing directories, or try running
+npm ERR! the command again as root/Administrator.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/vagrant/.npm/_logs/2020-05-05T13_42_17_029Z-debug.log
+vagrant@homestead:~/projects/social$ npm run dev
+
+> @ dev /home/vagrant/projects/social
+> npm run development
+
+
+> @ development /home/vagrant/projects/social
+> cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js
+
+ 95% emitting
+
+ ERROR  Failed to compile with 2 errors                                                                       1:42:40 PM
+
+ error  in ./resources/assets/sass/app.scss
+
+Module build failed: Error: Cannot find module 'node-sass'
+Require stack:
+- /home/vagrant/projects/social/node_modules/sass-loader/lib/loader.js
+- /home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js
+- /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/Compiler.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/webpack.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/src/Api.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/src/index.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/setup/webpack.config.js
+- /home/vagrant/projects/social/node_modules/webpack/bin/convert-argv.js
+- /home/vagrant/projects/social/node_modules/webpack/bin/webpack.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:980:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:862:27)
+    at Module.require (internal/modules/cjs/loader.js:1042:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (/home/vagrant/projects/social/node_modules/sass-loader/lib/loader.js:3:14)
+    at Module._compile (internal/modules/cjs/loader.js:1156:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)
+    at Module.load (internal/modules/cjs/loader.js:1000:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:899:14)
+    at Module.require (internal/modules/cjs/loader.js:1042:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:18:17)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at runLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:365:2)
+    at NormalModule.doBuild (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:182:3)
+    at NormalModule.build (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:275:15)
+    at Compilation.buildModule (/home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:157:10)
+    at factoryCallback (/home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:348:12)
+
+ @ ./resources/assets/sass/app.scss 4:14-266
+ @ multi ./resources/assets/js/app.js ./resources/assets/sass/app.scss
+
+ error  in ./resources/assets/sass/app.scss
+
+Module build failed: ModuleBuildError: Module build failed: Error: Cannot find module 'node-sass'
+Require stack:
+- /home/vagrant/projects/social/node_modules/sass-loader/lib/loader.js
+- /home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js
+- /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/Compiler.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/webpack.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/src/Api.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/src/index.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/setup/webpack.config.js
+- /home/vagrant/projects/social/node_modules/webpack/bin/convert-argv.js
+- /home/vagrant/projects/social/node_modules/webpack/bin/webpack.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:980:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:862:27)
+    at Module.require (internal/modules/cjs/loader.js:1042:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (/home/vagrant/projects/social/node_modules/sass-loader/lib/loader.js:3:14)
+    at Module._compile (internal/modules/cjs/loader.js:1156:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)
+    at Module.load (internal/modules/cjs/loader.js:1000:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:899:14)
+    at Module.require (internal/modules/cjs/loader.js:1042:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:18:17)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at runLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:365:2)
+    at NormalModule.doBuild (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:182:3)
+    at NormalModule.build (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:275:15)
+    at Compilation.buildModule (/home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:157:10)
+    at /home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:460:10
+    at /home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:195:19
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:367:11
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:172:11
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:32:11)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at runLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:365:2)
+    at NormalModule.doBuild (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:182:3)
+    at NormalModule.build (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:275:15)
+    at Compilation.buildModule (/home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:157:10)
+    at /home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:460:10
+    at /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js:243:5
+    at /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js:94:13
+    at /home/vagrant/projects/social/node_modules/tapable/lib/Tapable.js:268:11
+    at NormalModuleFactory.<anonymous> (/home/vagrant/projects/social/node_modules/webpack/lib/CompatibilityPlugin.js:52:5)
+    at NormalModuleFactory.applyPluginsAsyncWaterfall (/home/vagrant/projects/social/node_modules/tapable/lib/Tapable.js:272:13)
+    at /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js:69:10
+    at /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js:196:7
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+
+     Asset     Size  Chunks                    Chunk Names
+/js/app.js  1.11 MB       0  [emitted]  [big]  /js/app
+
+ERROR in ./node_modules/css-loader??ref--5-2!./node_modules/postcss-loader/lib??postcss!./node_modules/resolve-url-loader??ref--5-4!./node_modules/sass-loader/lib/loader.js??ref--5-5!./resources/assets/sass/app.scss
+Module build failed: Error: Cannot find module 'node-sass'
+Require stack:
+- /home/vagrant/projects/social/node_modules/sass-loader/lib/loader.js
+- /home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js
+- /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/Compiler.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/webpack.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/src/Api.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/src/index.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/setup/webpack.config.js
+- /home/vagrant/projects/social/node_modules/webpack/bin/convert-argv.js
+- /home/vagrant/projects/social/node_modules/webpack/bin/webpack.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:980:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:862:27)
+    at Module.require (internal/modules/cjs/loader.js:1042:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (/home/vagrant/projects/social/node_modules/sass-loader/lib/loader.js:3:14)
+    at Module._compile (internal/modules/cjs/loader.js:1156:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)
+    at Module.load (internal/modules/cjs/loader.js:1000:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:899:14)
+    at Module.require (internal/modules/cjs/loader.js:1042:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:18:17)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at runLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:365:2)
+    at NormalModule.doBuild (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:182:3)
+    at NormalModule.build (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:275:15)
+    at Compilation.buildModule (/home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:157:10)
+    at factoryCallback (/home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:348:12)
+ @ ./resources/assets/sass/app.scss 4:14-266
+ @ multi ./resources/assets/js/app.js ./resources/assets/sass/app.scss
+
+ERROR in ./resources/assets/sass/app.scss
+Module build failed: ModuleBuildError: Module build failed: Error: Cannot find module 'node-sass'
+Require stack:
+- /home/vagrant/projects/social/node_modules/sass-loader/lib/loader.js
+- /home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js
+- /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/Compiler.js
+- /home/vagrant/projects/social/node_modules/webpack/lib/webpack.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/src/Api.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/src/index.js
+- /home/vagrant/projects/social/node_modules/laravel-mix/setup/webpack.config.js
+- /home/vagrant/projects/social/node_modules/webpack/bin/convert-argv.js
+- /home/vagrant/projects/social/node_modules/webpack/bin/webpack.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:980:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:862:27)
+    at Module.require (internal/modules/cjs/loader.js:1042:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (/home/vagrant/projects/social/node_modules/sass-loader/lib/loader.js:3:14)
+    at Module._compile (internal/modules/cjs/loader.js:1156:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)
+    at Module.load (internal/modules/cjs/loader.js:1000:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:899:14)
+    at Module.require (internal/modules/cjs/loader.js:1042:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:18:17)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at runLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:365:2)
+    at NormalModule.doBuild (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:182:3)
+    at NormalModule.build (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:275:15)
+    at Compilation.buildModule (/home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:157:10)
+    at /home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:460:10
+    at /home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:195:19
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:367:11
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:172:11
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:32:11)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:165:10)
+    at /home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:176:18
+    at loadLoader (/home/vagrant/projects/social/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at runLoaders (/home/vagrant/projects/social/node_modules/loader-runner/lib/LoaderRunner.js:365:2)
+    at NormalModule.doBuild (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:182:3)
+    at NormalModule.build (/home/vagrant/projects/social/node_modules/webpack/lib/NormalModule.js:275:15)
+    at Compilation.buildModule (/home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:157:10)
+    at /home/vagrant/projects/social/node_modules/webpack/lib/Compilation.js:460:10
+    at /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js:243:5
+    at /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js:94:13
+    at /home/vagrant/projects/social/node_modules/tapable/lib/Tapable.js:268:11
+    at NormalModuleFactory.<anonymous> (/home/vagrant/projects/social/node_modules/webpack/lib/CompatibilityPlugin.js:52:5)
+    at NormalModuleFactory.applyPluginsAsyncWaterfall (/home/vagrant/projects/social/node_modules/tapable/lib/Tapable.js:272:13)
+    at /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js:69:10
+    at /home/vagrant/projects/social/node_modules/webpack/lib/NormalModuleFactory.js:196:7
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+ @ ./resources/assets/sass/app.scss
+ @ multi ./resources/assets/js/app.js ./resources/assets/sass/app.scss
+npm ERR! code ELIFECYCLE
+npm ERR! errno 2
+npm ERR! @ development: `cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js`
+npm ERR! Exit status 2
+npm ERR!
+npm ERR! Failed at the @ development script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/vagrant/.npm/_logs/2020-05-05T13_42_40_620Z-debug.log
+npm ERR! code ELIFECYCLE
+npm ERR! errno 2
+npm ERR! @ dev: `npm run development`
+npm ERR! Exit status 2
+npm ERR!
+npm ERR! Failed at the @ dev script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/vagrant/.npm/_logs/2020-05-05T13_42_40_646Z-debug.log
+vagrant@homestead:~/projects/social$ npm cache verify
+Cache verified and compressed (~/.npm/_cacache):
+Content verified: 1901 (45536118 bytes)
+Index entries: 2942
+Finished in 6.582s
+vagrant@homestead:~/projects/social$ sudo npm install node-sass
+npm WARN rollback Rolling back node-sass@4.14.1 failed (this is probably harmless): ETXTBSY: text file is busy, unlink '/home/vagrant/projects/social/node_modules/node-sass/vendor/linux-x64-72/binding.node'
+npm WARN ajv-keywords@3.4.1 requires a peer of ajv@^6.9.1 but none is installed. You must install peer dependencies yourself.
+npm WARN img-loader@3.0.1 requires a peer of imagemin@^5.0.0 || ^6.0.0 but none is installed. You must install peer dependencies yourself.
+
+npm ERR! code EPERM
+npm ERR! syscall rename
+npm ERR! path /home/vagrant/projects/social/node_modules/node-sass
+npm ERR! dest /home/vagrant/projects/social/node_modules/.node-sass.DELETE
+npm ERR! errno -1
+npm ERR! Error: EPERM: operation not permitted, rename '/home/vagrant/projects/social/node_modules/node-sass' -> '/home/vagrant/projects/social/node_modules/.node-sass.DELETE'
+npm ERR!  [OperationalError: EPERM: operation not permitted, rename '/home/vagrant/projects/social/node_modules/node-sass' -> '/home/vagrant/projects/social/node_modules/.node-sass.DELETE'] {
+npm ERR!   cause: [Error: EPERM: operation not permitted, rename '/home/vagrant/projects/social/node_modules/node-sass' -> '/home/vagrant/projects/social/node_modules/.node-sass.DELETE'] {
+npm ERR!     errno: -1,
+npm ERR!     code: 'EPERM',
+npm ERR!     syscall: 'rename',
+npm ERR!     path: '/home/vagrant/projects/social/node_modules/node-sass',
+npm ERR!     dest: '/home/vagrant/projects/social/node_modules/.node-sass.DELETE'
+npm ERR!   },
+npm ERR!   stack: "Error: EPERM: operation not permitted, rename '/home/vagrant/projects/social/node_modules/node-sass' -> '/home/vagrant/projects/social/node_modules/.node-sass.DELETE'",
+npm ERR!   errno: -1,
+npm ERR!   code: 'EPERM',
+npm ERR!   syscall: 'rename',
+npm ERR!   path: '/home/vagrant/projects/social/node_modules/node-sass',
+npm ERR!   dest: '/home/vagrant/projects/social/node_modules/.node-sass.DELETE'
+npm ERR! }
+npm ERR!
+npm ERR! The operation was rejected by your operating system.
+npm ERR! It is likely you do not have the permissions to access this file as the current user
+npm ERR!
+npm ERR! If you believe this might be a permissions issue, please double-check the
+npm ERR! permissions of the file and its containing directories, or try running
+npm ERR! the command again as root/Administrator.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/vagrant/.npm/_logs/2020-05-05T13_44_32_269Z-debug.log
+vagrant@homestead:~/projects/social$ sudo -s
+root@homestead:~/projects/social# sudo npm cache verify
+Cache verified and compressed (~/.npm/_cacache):
+Content verified: 1901 (45536118 bytes)
+Index entries: 2942
+Finished in 7.069s
+root@homestead:~/projects/social# sudo rm package-lock.json
+root@homestead:~/projects/social# sudo rm -rf node_modules
+rm: cannot remove 'node_modules/node-sass/vendor/linux-x64-72/binding.node': Text file busy
+root@homestead:~/projects/social# sudo rm -rf node_modules
+rm: cannot remove 'node_modules/node-sass/vendor/linux-x64-72/binding.node': Text file busy
+root@homestead:~/projects/social#
