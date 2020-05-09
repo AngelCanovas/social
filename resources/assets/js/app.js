@@ -6,3 +6,13 @@
  */
 
 require('./bootstrap');
+
+window.Vue = require('vue');
+
+
+
+Vue.component('status-form', require('./components/StatusForm'));
+
+const app = new Vue({
+    el: '#app'
+});
