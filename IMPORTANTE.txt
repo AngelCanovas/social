@@ -1,0 +1,7 @@
+Al terminar el video 14, tests de phpunit da error, Solucion:
+
+IMPORTANTE: Si al ejecutar los test de phpunit da error, puede ser problema de la cache. Ejecutar en terminal: php artisan config:clear
+Y volver a lanzar phpunit.
+Fuente:https://stackoverflow.com/questions/46325790/phpunit-expected-status-code-200-but-received-419-with-laravel/46326721#46326721
+
+Otros problemas:
