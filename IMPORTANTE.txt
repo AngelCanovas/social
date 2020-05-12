@@ -4,4 +4,10 @@ IMPORTANTE: Si al ejecutar los test de phpunit da error, puede ser problema de l
 Y volver a lanzar phpunit.
 Fuente:https://stackoverflow.com/questions/46325790/phpunit-expected-status-code-200-but-received-419-with-laravel/46326721#46326721
 
-Otros problemas:
+
+SOLUCION ERROR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+https://stackoverflow.com/questions/30594962/sqlstatehy000-1045-access-denied-for-user-rootlocalhost-using-password/37061837
+
+Modificar archivo database.php, linea de conexion a base de datos por: 'default' => env('DB_CONNECTION', ''),
+Modificar archivo .env linea password base de datos por: DB_PASSWORD=secret
+
