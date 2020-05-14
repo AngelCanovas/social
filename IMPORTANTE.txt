@@ -11,3 +11,10 @@ https://stackoverflow.com/questions/30594962/sqlstatehy000-1045-access-denied-fo
 Modificar archivo database.php, linea de conexion a base de datos por: 'default' => env('DB_CONNECTION', ''),
 Modificar archivo .env linea password base de datos por: DB_PASSWORD=secret
 
+Video 18 Problemas:
+Debido a problemas en el video anterior al ejecutar los test creados, saliendo error:
+array_key_exists(): Using array_key_exists() on objects is deprecated. Use isset() or property_exists() instead
+He cambiado la version de php a 7.2, por ser un problema que ocurre con versiones modernas de php en proyectos antiguos. Para ello sengun la documentacion: https://laravel.com/docs/7.x/homestead#multiple-php-versions
+Modifico el archivo Homestead.yaml () añadiendo a los sites php: "7.2" en social.
+Y una vez iniciada la maquina con --provision ejecutar dentro de ella: php72 para modificar la version de cli usada. Y no olvidar cambiar la version de php que usa phpstorm actualizandola a la 7.2 de vagrant.
+
