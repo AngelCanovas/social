@@ -23,3 +23,5 @@ Ejecutar en terminal:   php artisan migrate:fresh --seed
 En video 24 al ejecutar el test sale error: Actual path [/] does not equal expected path [/login]. Failed asserting that '/' matches PCRE pattern "/^\/login$/u".
 Y al probar la pagina en el navegador sale error al clickar en un estado: TypeError: "this.isAuthenticated is not a function"
 
+Aparece error Illuminate\Session\TokenMismatchException al ejecutar tests.
+
