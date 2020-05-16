@@ -42,13 +42,16 @@ class UsersCanLikeStatusesTest extends DuskTestCase
             $browser->loginAs($user)
                 ->visit('/')
                 ->waitForText($status->body)
-                ->press('@like-btn') // arroba es selector de dusk
-                ->waitForText('TE GUSTA') // texto del boton cambia a te gusta
+                ->assertSeeIn('@likes-count', 0)
+                ->press('@like-btn')
+                ->waitForText('TE GUSTA')
                 ->assertSee('TE GUSTA')
+                ->assertSeeIn('@likes-count', 1)
 
                 ->press('@unlike-btn')
                 ->waitForText('ME GUSTA')
                 ->assertSee('ME GUSTA')
+                ->assertSeeIn('@likes-count', 0)
             ;
         });
     }
