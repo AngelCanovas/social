@@ -18,3 +18,8 @@ He cambiado la version de php a 7.2, por ser un problema que ocurre con versione
 Modifico el archivo Homestead.yaml () añadiendo a los sites php: "7.2" en social.
 Y una vez iniciada la maquina con --provision ejecutar dentro de ella: php72 para modificar la version de cli usada. Y no olvidar cambiar la version de php que usa phpstorm actualizandola a la 7.2 de vagrant.
 
+En video 22-24 he tenido el problema de que no podia hacer login, daba error de tabla social.users no existe, para solucionarlo:
+Ejecutar en terminal:   php artisan migrate:fresh --seed
+En video 24 al ejecutar el test sale error: Actual path [/] does not equal expected path [/login]. Failed asserting that '/' matches PCRE pattern "/^\/login$/u".
+Y al probar la pagina en el navegador sale error al clickar en un estado: TypeError: "this.isAuthenticated is not a function"
+
