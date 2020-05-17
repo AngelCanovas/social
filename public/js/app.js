@@ -50096,7 +50096,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -50133,6 +50133,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -50143,7 +50151,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             required: true
         }
     },
-    components: { LikeBtn: __WEBPACK_IMPORTED_MODULE_0__LikeBtn___default.a }
+    components: { LikeBtn: __WEBPACK_IMPORTED_MODULE_0__LikeBtn___default.a },
+    data: function data() {
+        return {
+            newComment: '',
+            comments: []
+        };
+    },
+
+    methods: {
+        addComment: function addComment() {
+            var _this = this;
+
+            axios.post('/statuses/' + this.status.id + '/comments', { body: this.newComment }).then(function (res) {
+                _this.newComment = '';
+                _this.comments.push(res.data.data);
+            });
+        }
+    }
 });
 
 /***/ }),
@@ -50398,9 +50423,49 @@ var render = function() {
           _c("span", { attrs: { dusk: "likes-count" } }, [
             _vm._v(_vm._s(_vm.status.likes_count))
           ])
-        ])
+        ]),
+        _vm._v(" "),
+        _c(
+          "form",
+          {
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+                return _vm.addComment($event)
+              }
+            }
+          },
+          [
+            _c("textarea", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.newComment,
+                  expression: "newComment"
+                }
+              ],
+              attrs: { name: "comment" },
+              domProps: { value: _vm.newComment },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.newComment = $event.target.value
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("button", { attrs: { dusk: "comment-btn" } }, [_vm._v("Enviar")])
+          ]
+        ),
+        _vm._v(" "),
+        _vm._l(_vm.comments, function(comment) {
+          return _c("div", [_vm._v(_vm._s(comment.body))])
+        })
       ],
-      1
+      2
     )
   ])
 }
