@@ -49703,7 +49703,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -49747,6 +49747,7 @@ module.exports = function listToStyles (parentId, list) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
 //
 //
 //
@@ -49828,7 +49829,8 @@ var render = function() {
                 attrs: {
                   name: "body",
                   placeholder:
-                    "¿Que estas pensando " + _vm.currentUser.name + "?"
+                    "¿Que estas pensando " + _vm.currentUser.name + "?",
+                  required: ""
                 },
                 domProps: { value: _vm.body },
                 on: {
@@ -50096,7 +50098,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -50184,6 +50186,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             axios.post('/statuses/' + this.status.id + '/comments', { body: this.newComment }).then(function (res) {
                 _this.newComment = '';
                 _this.comments.push(res.data.data);
+            }).catch(function (err) {
+                console.log(err.response.data);
             });
         }
     }
@@ -50512,7 +50516,8 @@ var render = function() {
                       attrs: {
                         name: "comment",
                         placeholder: "Escribe un comentario..",
-                        rows: "1"
+                        rows: "1",
+                        required: ""
                       },
                       domProps: { value: _vm.newComment },
                       on: {

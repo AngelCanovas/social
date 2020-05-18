@@ -35,8 +35,8 @@
                 <div class="d-flex align-items-center ">
                     <img class="rounded shadow-sm float-left mr-2" width="34px" src="https://aprendible.com/images/default-avatar.jpg" :alt="currentUser.name">
                     <div class="input-group">
-                        <textarea class="form-control border-0 shadow-sm" name="comment" v-model="newComment" placeholder="Escribe un comentario.." rows="1"></textarea>
-                        
+                        <textarea class="form-control border-0 shadow-sm" name="comment" v-model="newComment" placeholder="Escribe un comentario.." rows="1" required></textarea>
+
                         <div class="input-group-append">
                             <button class="btn btn-primary" dusk="comment-btn">Enviar</button>
                         </div>
@@ -71,6 +71,9 @@
                     .then(res => {
                         this.newComment = '';
                         this.comments.push(res.data.data);
+                    })
+                    .catch(err => {
+                        console.log(err.response.data)
                     })
             }
         }

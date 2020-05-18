@@ -5,7 +5,8 @@
                 <textarea v-model="body"
                           class="form-control border-0 bg-light"
                           name="body"
-                          :placeholder="`¿Que estas pensando ${currentUser.name}?`">
+                          :placeholder="`¿Que estas pensando ${currentUser.name}?`"
+                          required>
 
                 </textarea>
             </div>
