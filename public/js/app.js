@@ -50550,7 +50550,7 @@ var staticRenderFns = [
       _c(
         "button",
         { staticClass: "btn btn-primary", attrs: { dusk: "comment-btn" } },
-        [_vm._v("Enviando ")]
+        [_vm._v("Enviar")]
       )
     ])
   }
@@ -50609,7 +50609,7 @@ module.exports = {
             return !!user.content;
         },
         guest: function guest() {
-            return !this.isAuthenticated();
+            return !this.isAuthenticated;
         }
     },
     methods: {

@@ -24,4 +24,12 @@ En video 24 al ejecutar el test sale error: Actual path [/] does not equal expec
 Y al probar la pagina en el navegador sale error al clickar en un estado: TypeError: "this.isAuthenticated is not a function"
 
 Aparece error Illuminate\Session\TokenMismatchException al ejecutar tests.
+Para solucionar este error, y los errores en otros tests phpunit de que recibe codigo 419 en vez de 401 o 422 ejecutar php artisan config:clear para limpiar la cache de phpunit.
+Fuente: https://stackoverflow.com/questions/46325790/phpunit-expected-status-code-200-but-received-419-with-laravel
+
+Para solucionar el problema SQLSTATE[HY000] [1049] Unknown database social_test de que no encuentra la base de datos social_test al ejecutar los tests de dusk,
+dentro de vagrant ssh ir a la consola de mysql (mysql -u root) y comprobar las bases de datos que hay (show databases;)
+Como no estara creada la base de datos social_test , la creamos (create database social_test;). Y ya deberian pasar los tests de dusk.
+    Tambien es posible que el error sea por la cache, para limpiarla: php artisan cache:clear
+
 
