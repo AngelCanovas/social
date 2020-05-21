@@ -21,7 +21,6 @@
         </div>
 
         <div class="card-footer">
-
             <div v-for="comment in comments" class="mb-3">
                 <img class="rounded shadow-sm float-left mr-2" width="34px" :src="comment.user_avatar" :alt="comment.user_name">
                 <div class="card border-0 shadow-sm">
@@ -30,7 +29,13 @@
                         {{ comment.body }}
                     </div>
                 </div>
+
+                <span dusk="comment-likes-count">{{ comment.likes_count }}</span>
+                <button v-if="comment.is_liked" dusk="comment-unlike-btn" @click="unlikeComment(comment)">TE GUSTA</button>
+                <button v-else dusk="comment-like-btn" @click="likeComment(comment)">ME GUSTA</button>
+
             </div>
+
             <form @submit.prevent="addComment" v-if="isAuthenticated">
                 <div class="d-flex align-items-center ">
                     <img class="rounded shadow-sm float-left mr-2" width="34px" src="https://aprendible.com/images/default-avatar.jpg" :alt="currentUser.name">
@@ -71,6 +76,26 @@
                     .then(res => {
                         this.newComment = '';
                         this.comments.push(res.data.data);
+                    })
+                    .catch(err => {
+                        console.log(err.response.data)
+                    })
+            },
+            likeComment(comment) {
+                axios.post(`/comments/${comment.id}/likes`)
+                    .then(res => {
+                        comment.likes_count ++;
+                        comment.is_liked = true;
+                    })
+                    .catch(err => {
+                        console.log(err.response.data)
+                    })
+            },
+            unlikeComment(comment) {
+                axios.delete(`/comments/${comment.id}/likes`)
+                    .then(res => {
+                        comment.likes_count --;
+                        comment.is_liked = false;
                     })
                     .catch(err => {
                         console.log(err.response.data)
