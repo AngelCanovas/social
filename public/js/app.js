@@ -50407,18 +50407,16 @@ var render = function() {
       _c("div", { staticClass: "d-flex align-items-center mb-3" }, [
         _c("img", {
           staticClass: "rounded mr-3 shadow-sm",
-          attrs: {
-            width: "40px",
-            src: "https://aprendible.com/images/default-avatar.jpg",
-            alt: ""
-          }
+          attrs: { width: "40px", src: _vm.status.user_avatar, alt: "" }
         }),
         _vm._v(" "),
         _c("div", {}, [
-          _c("h5", {
-            staticClass: "mb-1",
-            domProps: { textContent: _vm._s(_vm.status.user_name) }
-          }),
+          _c("h5", { staticClass: "mb-1" }, [
+            _c("a", {
+              attrs: { href: _vm.status.user_link },
+              domProps: { textContent: _vm._s(_vm.status.user_name) }
+            })
+          ]),
           _vm._v(" "),
           _c("div", {
             staticClass: "small text-muted",
@@ -50482,7 +50480,7 @@ var render = function() {
                 [
                   _c("div", { staticClass: "card border-0 shadow-sm" }, [
                     _c("div", { staticClass: "card-body p-2 text-secondary" }, [
-                      _c("a", { attrs: { href: "" } }, [
+                      _c("a", { attrs: { href: comment.user_link } }, [
                         _c("strong", [_vm._v(_vm._s(comment.user_name))])
                       ]),
                       _vm._v(
@@ -50542,7 +50540,7 @@ var render = function() {
                     staticClass: "rounded shadow-sm float-left mr-2",
                     attrs: {
                       width: "34px",
-                      src: "https://aprendible.com/images/default-avatar.jpg",
+                      src: _vm.currentUser.avatar,
                       alt: _vm.currentUser.name
                     }
                   }),

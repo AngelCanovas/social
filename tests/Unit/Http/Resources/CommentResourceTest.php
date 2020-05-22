@@ -33,7 +33,12 @@ class CommentResourceTest extends TestCase
         );
 
         $this->assertEquals(
-            'https://aprendible.com/images/default-avatar.jpg',
+            $comment->user->link(),
+            $commentResource['user_link']
+        );
+
+        $this->assertEquals(
+            $comment->user->avatar(),
             $commentResource['user_avatar']
         );
 
