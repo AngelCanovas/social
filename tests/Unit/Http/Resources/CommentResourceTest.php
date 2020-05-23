@@ -2,6 +2,8 @@
 
 namespace Tests\Unit\Http\Resources;
 
+use App\Http\Resources\UserResource;
+use App\User;
 use Tests\TestCase;
 use App\Models\Status;
 use App\Http\Resources\CommentResource;
@@ -28,21 +30,6 @@ class CommentResourceTest extends TestCase
         );
 
         $this->assertEquals(
-            $comment->user->name,
-            $commentResource['user_name']
-        );
-
-        $this->assertEquals(
-            $comment->user->link(),
-            $commentResource['user_link']
-        );
-
-        $this->assertEquals(
-            $comment->user->avatar(),
-            $commentResource['user_avatar']
-        );
-
-        $this->assertEquals(
             0,
             $commentResource['likes_count']
         );
@@ -52,5 +39,14 @@ class CommentResourceTest extends TestCase
             $commentResource['is_liked']
         );
 
+
+        $this->assertInstanceOf(
+            UserResource::class,
+            $commentResource['user']
+        );
+        $this->assertInstanceOf(
+            User::class,
+            $commentResource['user']->resource
+        );
     }
 }

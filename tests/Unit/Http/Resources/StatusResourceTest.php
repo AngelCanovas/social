@@ -4,8 +4,10 @@ namespace Tests\Unit\Http\Resources;
 
 use App\Http\Resources\CommentResource;
 use App\Http\Resources\StatusResource;
+use App\Http\Resources\UserResource;
 use App\Models\Comment;
 use App\Models\Status;
+use App\User;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -30,18 +32,6 @@ class StatusResourceTest extends TestCase
             $statusResource['body']
         );
         $this->assertEquals(
-            $status->user->name,
-            $statusResource['user_name']
-        );
-        $this->assertEquals(
-            $status->user->link(),
-            $statusResource['user_link']
-        );
-        $this->assertEquals(
-            $status->user->avatar(),
-            $statusResource['user_avatar']
-        );
-        $this->assertEquals(
             $status->created_at->diffForHumans(),
             $statusResource['ago']
         );
@@ -53,7 +43,6 @@ class StatusResourceTest extends TestCase
             0,
             $statusResource['likes_count']
         );
-        // dd($statusResource['comments']->first()->resource);
         $this->assertEquals(
             CommentResource::class,
             $statusResource['comments']->collects
@@ -61,6 +50,14 @@ class StatusResourceTest extends TestCase
         $this->assertInstanceOf(
             Comment::class,
             $statusResource['comments']->first()->resource
+        );
+        $this->assertInstanceOf(
+            UserResource::class,
+            $statusResource['user']
+        );
+        $this->assertInstanceOf(
+            User::class,
+            $statusResource['user']->resource
         );
     }
 }
