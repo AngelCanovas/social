@@ -25,6 +25,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    protected $appends = ['avatar'];
+
     public function getRouteKeyName()
     {
         return 'name';
@@ -40,4 +42,8 @@ class User extends Authenticatable
         return 'https://aprendible.com/images/default-avatar.jpg';
     }
 
+    public function getAvatarAttribute()
+    {
+        return $this->avatar();
+    }
 }
