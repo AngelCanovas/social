@@ -49964,7 +49964,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -49992,6 +49992,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: { StatusListItem: __WEBPACK_IMPORTED_MODULE_0__StatusListItem___default.a },
+    props: {
+        url: String
+    },
     data: function data() {
         return {
             statuses: []
@@ -50000,7 +50003,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     mounted: function mounted() {
         var _this = this;
 
-        axios.get('/statuses').then(function (res) {
+        axios.get(this.getUrl).then(function (res) {
             _this.statuses = res.data.data;
         }).catch(function (err) {
             console.log(err.response.data);
@@ -50009,6 +50012,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         EventBus.$on('status-created', function (status) {
             _this.statuses.unshift(status);
         });
+    },
+
+    computed: {
+        getUrl: function getUrl() {
+            return this.url ? this.url : '/statuses';
+        }
     }
 });
 
