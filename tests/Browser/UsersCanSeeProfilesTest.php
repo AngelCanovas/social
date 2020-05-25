@@ -28,7 +28,7 @@ class UsersCanSeeProfilesTest extends DuskTestCase
                 ->waitForText($statuses->first()->body)
                 ->assertSee($statuses->first()->body)
                 ->assertSee($statuses->last()->body)
-                ->assertDontSee($otherStatus)
+                ->assertDontSee($otherStatus->body)
             ;
         });
     }
