@@ -32,4 +32,13 @@ dentro de vagrant ssh ir a la consola de mysql (mysql -u root) y comprobar las b
 Como no estara creada la base de datos social_test , la creamos (create database social_test;). Y ya deberian pasar los tests de dusk.
     Tambien es posible que el error sea por la cache, para limpiarla: php artisan cache:clear
 
+En el video 63 se ha añadido las claves de Pusher al archivo .env y al .env.dusk.local
+Esta configuracion no se sincroniza, es necesario ir a la pagina de pusher: https://pusher.com/ y dentro de tu cuenta, en la aplicacion social-app-development, ir al apartado app keys para saber las claves de la aplicacion
+Estas claves se aplican en los ficheros de configuracion .env anteriores:
+    BROADCAST_DRIVER=pusher
+
+    PUSHER_APP_ID=xxxx
+    PUSHER_APP_KEY=xxxx
+    PUSHER_APP_SECRET=xxxx
+    PUSHER_APP_CLUSTER=xx
 
