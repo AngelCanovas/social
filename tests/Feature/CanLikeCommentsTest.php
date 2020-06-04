@@ -25,6 +25,8 @@ class CanLikeCommentsTest extends TestCase
     /** @test */
     function an_authenticated_user_can_like_and_unlike_comments()
     {
+        \Notification::fake();
+
         // Para que phpunit ignore el test al ejecutarse: $this->markTestIncomplete();
         $this->withoutExceptionHandling();
 
