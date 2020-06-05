@@ -9,7 +9,6 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
-
 window.EventBus = new Vue();
 
 Vue.component('status-form', require('./components/StatusForm'));

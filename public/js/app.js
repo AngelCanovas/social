@@ -56673,7 +56673,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     components: { LikeBtn: __WEBPACK_IMPORTED_MODULE_0__LikeBtn___default.a },
     props: {
         comment: {
-            type: Array,
+            type: Object,
             required: true
         }
     },
@@ -57611,7 +57611,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -57622,6 +57622,12 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -57684,7 +57690,7 @@ var render = function() {
     _c(
       "div",
       {
-        staticClass: "dropdown-menu-right",
+        staticClass: "dropdown-menu dropdown-menu-right",
         attrs: { "aria-labelledby": "dropdownNotifications" }
       },
       _vm._l(_vm.notifications, function(notification) {
@@ -57694,13 +57700,7 @@ var render = function() {
             staticClass: "dropdown-item",
             attrs: { dusk: notification.id, href: notification.data.link }
           },
-          [
-            _vm._v(
-              "\n            " +
-                _vm._s(notification.data.message) +
-                "\n        "
-            )
-          ]
+          [_vm._v(_vm._s(notification.data.message))]
         )
       }),
       0
