@@ -29,7 +29,7 @@ class UsersCanGetTheirNotificationsTest extends DuskTestCase
             ]
         ]);
 
-        $this->browse(function (Browser $browser) use ($user, $status, $notification) {
+        $this->browse(function (Browser $browser) use ($user, $notification, $status) {
             $browser->loginAs($user)
                 ->visit('/')
                 ->resize(1024, 768)
@@ -37,6 +37,16 @@ class UsersCanGetTheirNotificationsTest extends DuskTestCase
                 ->assertSee('Has recibido un like')
                 ->click("@{$notification->id}")
                 ->assertUrlIs($status->path())
+
+                ->click('@notifications')
+                ->pause(1000) // para que de tiempo a que carge el boton
+                ->press("@mark-as-read-{$notification->id}")
+                ->waitFor("@mark-as-unread-{$notification->id}")
+                ->assertMissing("@mark-as-read-{$notification->id}")
+
+                ->press("@mark-as-unread-{$notification->id}")
+                ->waitFor("@mark-as-read-{$notification->id}")
+                ->assertMissing("@mark-as-unread-{$notification->id}")
             ;
         });
     }
