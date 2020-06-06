@@ -42,3 +42,10 @@ Estas claves se aplican en los ficheros de configuracion .env anteriores:
     PUSHER_APP_SECRET=xxxx
     PUSHER_APP_CLUSTER=xx
 
+En el video 83 al actualizar a Laravel 5.8 surgen problemas para ejecutar Laravel Dusk.
+Para solucionarlos, en el DuskTestCase cambio la ip del RemoteWebDriver por http://localhost:9515
+Y luego en Vagrant, en la terminal ssh del proyecto instalo el chrome:
+    sudo apt-get update
+    sudo apt-get install chromium-browser
+Si al ejecutar ahora php artisan dusk falla probar a ejecutar: php artisan dusk:chrome-driver
+
