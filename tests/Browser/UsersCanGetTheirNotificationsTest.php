@@ -34,6 +34,7 @@ class UsersCanGetTheirNotificationsTest extends DuskTestCase
                 ->visit('/')
                 ->resize(1024, 768)
                 ->click('@notifications')
+                ->pause(1000)
                 ->assertSee('Has recibido un like')
                 ->click("@{$notification->id}")
                 ->assertUrlIs($status->path())

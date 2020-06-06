@@ -19,7 +19,7 @@ class HasLikesTest extends TestCase
 {
     use RefreshDatabase;
 
-    function setUp()
+    function setUp(): void
     {
         parent::setUp();
 
