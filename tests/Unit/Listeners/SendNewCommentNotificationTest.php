@@ -6,6 +6,7 @@ use App\Events\CommentCreated;
 use App\Models\Comment;
 use App\Models\Status;
 use App\Notifications\NewCommentNotification;
+use Illuminate\Notifications\Messages\BroadcastMessage;
 use Notification;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -28,9 +29,11 @@ class SendNewCommentNotificationTest extends TestCase
         Notification::assertSentTo(
             $status->user,
             NewCommentNotification::class,
-            function ($notification, $channels) use ($comment) {
+            function ($notification, $channels) use ($comment, $status) {
                 $this->assertContains('database', $channels);
+                $this->assertContains('broadcast', $channels);
                 $this->assertTrue($notification->comment->is($comment));
+                $this->assertInstanceOf(BroadcastMessage::class, $notification->toBroadcast($status->user));
                 return true;
             }
         );
