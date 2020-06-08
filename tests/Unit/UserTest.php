@@ -12,7 +12,7 @@ class UserTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    function route_key_name_is_set_to_name()
+    public function route_key_name_is_set_to_name()
     {
         $user = factory(User::class)->make();
 
@@ -20,7 +20,7 @@ class UserTest extends TestCase
     }
 
     /** @test */
-    function user_has_a_link_to_their_profile()
+    public function user_has_a_link_to_their_profile()
     {
         $user = factory(User::class)->make();
 
@@ -28,7 +28,7 @@ class UserTest extends TestCase
     }
 
     /** @test */
-    function user_has_an_avatar()
+    public function user_has_an_avatar()
     {
         $user = factory(User::class)->make();
 
@@ -38,12 +38,37 @@ class UserTest extends TestCase
     }
 
     /** @test */
-    function user_has_many_statuses()
+    public function user_has_many_statuses()
     {
         $user = factory(User::class)->create();
 
         factory(Status::class)->create(['user_id' => $user->id]);
 
         $this->assertInstanceOf(Status::class, $user->statuses->first());
+    }
+
+    /** @test */
+    public function user_can_send_friend_requests()
+    {
+        $sender = factory(User::class)->create();
+        $recipient = factory(User::class)->create();
+
+        $friendship = $sender->sendFriendRequestTo($recipient);
+
+        $this->assertTrue($friendship->sender->is($sender));
+        $this->assertTrue($friendship->recipient->is($recipient));
+    }
+
+    /** @test */
+    public function user_can_accept_friend_requests()
+    {
+        $sender = factory(User::class)->create();
+        $recipient = factory(User::class)->create();
+
+        $sender->sendFriendRequestTo($recipient);
+
+        $friendship = $recipient->acceptFriendRequestFrom($sender);
+
+        $this->assertEquals('accepted', $friendship->status);
     }
 }
