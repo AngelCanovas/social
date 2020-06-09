@@ -9,7 +9,7 @@
     <meta name="user" content="{{ Auth::user() }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <title>SocialApp</title>
+    <title>Fakebook</title>
 </head>
 <body>
 

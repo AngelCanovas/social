@@ -2,7 +2,7 @@
     <img src="{{ $user->avatar }}" alt="{{ $user->name }}" class="card-img-top">
     <div class="card-body">
         @if(auth()->id() === $user->id)
-            <h5 class="card-title"><a href="{{ route('users.show', $user) }}">{{ $user->name }}</a><small class="text-secondary">Eres tu</small></h5>
+            <h5 class="card-title"><a href="{{ route('users.show', $user) }}">{{ $user->name }}</a><small class="text-secondary ml-2">Eres tú</small></h5>
         @else
             <h5 class="card-title"><a href="{{ route('users.show', $user) }}">{{ $user->name }}</a></h5>
             <friendship-btn

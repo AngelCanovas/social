@@ -22,8 +22,6 @@
 </template>
 
 <script>
-    // console.log(JSON.parse(user.content).email);
-
     export default {
         data() {
             return {
@@ -34,7 +32,7 @@
             submit() {
                 axios.post('/statuses', {body: this.body})
                 .then(res => {
-                    EventBus.$emit('status-created', res.data.data); // ['data' => ['body' => 'asdfg']]
+                    EventBus.$emit('status-created', res.data.data);
                     this.body = ''
                 })
                 .catch(err => {

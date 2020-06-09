@@ -13,17 +13,17 @@
                         <div class="card-body">
 
                             <div class="form-group">
-                                <label>Email:</label>
-                                <input class="form-control border-0" type="email" name="email" placeholder="Tu email..."
+                                <i class="fas fa-envelope mr-2"></i><label class="font-weight-bold">Correo Electrónico:</label>
+                                <input class="form-control border-1" type="email" name="email" placeholder="Tu email..."
                                        value="{{ old('email') }}">
                             </div>
 
                             <div class="form-group">
-                                <label>Contraseña:</label>
-                                <input class="form-control border-0" type="password" name="password" placeholder="Tu contraseña...">
+                                <i class="fas fa-key mr-2"></i><label class="font-weight-bold">Contraseña:</label>
+                                <input class="form-control border-1" type="password" name="password" placeholder="Tu contraseña...">
                             </div>
 
-                            <button class="btn btn-primary btn-block" dusk="login-btn">Login</button>
+                            <button class="btn btn-primary btn-block font-weight-bold btn-success" dusk="login-btn">Iniciar sesión</button>
                         </div>
                     </form>
                 </div>
