@@ -26,12 +26,12 @@ class UsersCanLikeCommentsTest extends DuskTestCase
                 ->waitForText($comment->body)
                 ->assertSeeIn('@comment-likes-count', 0)
                 ->press('@comment-like-btn')
-                ->waitForText('TE GUSTA')
+                ->waitForText('TE GUSTA', 15)
                 ->assertSee('TE GUSTA')
                 ->assertSeeIn('@comment-likes-count', 1)
 
                 ->press('@comment-like-btn')
-                ->waitForText('ME GUSTA')
+                ->waitForText('ME GUSTA', 15)
                 ->assertSee('ME GUSTA')
                 ->pause(2000)
                 ->assertSeeIn('@comment-likes-count', 0)
@@ -53,6 +53,7 @@ class UsersCanLikeCommentsTest extends DuskTestCase
 
             $browser2->loginAs($user)
                 ->visit('/')
+                ->maximize()
                 ->waitForText($comment->body)
                 ->assertSeeIn('@comment-likes-count', 0)
                 ->press('@comment-like-btn')
