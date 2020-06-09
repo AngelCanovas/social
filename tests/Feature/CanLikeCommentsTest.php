@@ -55,6 +55,5 @@ class CanLikeCommentsTest extends TestCase
         $this->assertCount(0, $comment->fresh()->likes);
 
         $this->assertDatabaseMissing('likes', ['user_id' => $user->id]);
-
     }
 }
