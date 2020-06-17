@@ -65,7 +65,7 @@ class UsersCanRequestFriendshipTest extends DuskTestCase
             $browser->loginAs($user)
                 ->visit(route('users.show', $user))
                 ->assertMissing('@request-friendship')
-                ->assertSee('Eres tu')
+                ->assertSee('Eres tú')
             ;
         });
     }
